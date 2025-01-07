@@ -19,6 +19,8 @@ a {
     padding-bottom: 0.3rem;
 }
 
-table {
-    border-collapse: collapse;
-  }
+tr, td {
+    border-bottom: 2px solid #ddd;
+
+    text-align: center;
+}
