@@ -28,6 +28,7 @@ tr, td {
 footer{
     font-size:smaller;
     color:darkblue;
+    text-align: center;
 }
 
 footer a:link{
