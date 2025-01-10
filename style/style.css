@@ -24,3 +24,13 @@ tr, td {
 
     text-align: center;
 }
+
+footer{
+    font-size:smaller;
+    color:darkblue;
+}
+
+footer a:link{
+    text-decoration: underline;
+    
+}
