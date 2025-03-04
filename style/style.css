@@ -2,8 +2,6 @@ body{
     background-color:antiquewhite;
     font-family: "Times New Roman", Times, serif;
     /*text-align: center;*/
-    text-align: justify;
-    text-justify: inter-word;
     font-size: x-large;
     margin-right: 5%;
     margin-left: 5%;
@@ -19,9 +17,16 @@ a {
     padding-bottom: 0.3rem;
 }
 
+.divConSeparatori{
+    border-bottom: 1px solid black;
+}
+
+.descrizione{
+    font-size:large;
+}
+
 tr, td {
     border-bottom: 2px solid #ddd;
-
     text-align: center;
 }
 
