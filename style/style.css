@@ -11,8 +11,9 @@ body{
     -webkit-font-smoothing: antialiased;
     /*text-align: center;*/
     font-size: x-large;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 7%;
+    margin-left: 7%;
+    max-width: 700px;
 }
 
 a {
