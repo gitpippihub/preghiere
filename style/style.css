@@ -1,6 +1,12 @@
+:root {
+    --font: "Times New Roman", Times, serif;
+    --background: antiquewhite;
+    --color: black;
+}
 body{
-    background-color:antiquewhite;
-    font-family: "Times New Roman", Times, serif;
+    background-color: var(--background);
+    color: var(--color);
+    font-family: var(--font);
     /*text-align: center;*/
     font-size: x-large;
     margin-right: 5%;
@@ -9,7 +15,7 @@ body{
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--color);
 }
 
 .elenco{
@@ -18,7 +24,7 @@ a {
 }
 
 .divConSeparatori{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color);
 }
 
 .descrizione{
@@ -26,24 +32,25 @@ a {
 }
 
 tr, td {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
     text-align: center;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+
 }
 
 footer{
     font-size:smaller;
-    color:darkblue;
     text-align: center;
 }
 
 footer a:link{
     text-decoration: underline;
-    
 }
 
 @media (prefers-color-scheme: dark) {
 
-    body {        
+    :root {        
         --background: rgb(41, 41, 41);
         --color: antiquewhite;
     }
