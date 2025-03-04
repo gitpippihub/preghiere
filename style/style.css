@@ -52,6 +52,6 @@ footer a:link{
 
     :root {        
         --background: rgb(41, 41, 41);
-        --color: antiquewhite;
+        --color: rgba(250, 235, 215, 0.8);
     }
   }
