@@ -1,6 +1,6 @@
 # Preghiere
 
-Sito per la raccolta di preghiere
+Raccolta di preghiere cattoliche online
 
 # Fork
 
