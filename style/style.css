@@ -33,21 +33,13 @@ a {
     font-size:large;
 }
 
-tr, td {
+td {
     border-bottom: 1px solid #ddd;
     text-align: center;
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     padding-bottom: 0.6rem;
     padding-top: 0.4rem;
-}
-
-.colonnaDestra{
-    border-left: 1px solid #ddd;
-}
-
-.colonnaSinistra{
-    border-right: 1px solid #ddd;
 }
 
 footer{
