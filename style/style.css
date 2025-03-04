@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Garamond');
+
 :root {
-    --font: "Times New Roman", Times, serif;
+    --font: 'Garamond', 'Times New Roman', Times, serif;
     --background: antiquewhite;
     --color: black;
 }
@@ -10,7 +12,7 @@ body{
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     /*text-align: center;*/
-    font-size: x-large;
+    font-size: xx-large;
     margin-right: 7%;
     margin-left: 7%;
     max-width: 700px;
