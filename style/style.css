@@ -34,7 +34,7 @@ a {
 }
 
 tr, td {
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
     text-align: center;
     padding-bottom: 0.6rem;
     padding-top: 0.4rem;
