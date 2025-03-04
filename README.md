@@ -1,4 +1,4 @@
-# preghiere
+# Preghiere
 
 Sito per la raccolta di preghiere
 
