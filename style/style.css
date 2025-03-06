@@ -58,6 +58,10 @@ p {
     text-align: center;
 }
 
+.n_versetto{
+    color:#830f24;
+}
+
 td {
     border-bottom: 1px solid #ddd;
     text-align: center;
