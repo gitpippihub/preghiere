@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*font google: "Allura", "Playwrite IT Moderna", "Newsreader" */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
 :root {
-    --fontFooter: 'Roboto Mono', monospace;
-    --font: Helvetica, Arial, sans-serif;
-    --background: white;
-    --color: #232333;
+    --font: "Newsreader", sans-serif;
+    --background: antiquewhite;
+    --color: black;
 }
+
 
 body{
     background-color: var(--background);
@@ -37,14 +39,6 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0;
-}
-
-footer{
-    text-align: center;
-    font-family: var(--fontFooter);
-    font-size: 0.75rem;
-    font-weight: 400;
-    padding-bottom: 20px;
 }
 
 #userPhoto{
