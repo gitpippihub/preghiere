@@ -80,12 +80,14 @@ footer a:link{
     text-decoration: underline;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
     :root {        
         --background: rgb(51, 51, 51);
         --color: rgba(250, 235, 215, 0.8);
     }
 }
+    */
 
 @media (min-width: 750px) {
     body{
