@@ -18,12 +18,12 @@
         
         .rosario-container {
             text-align: center;
-            padding: 20px;
+            padding: 20px 20px 60px 20px;
             cursor: pointer;
-            min-height: 70vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -32,10 +32,12 @@
             -webkit-touch-callout: none;
             -webkit-focus-ring-color: transparent;
             outline: none;
+            box-sizing: border-box;
         }
         
         .rosario-header {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            flex-shrink: 0;
         }
         
         .misteri-title {
@@ -54,10 +56,11 @@
             font-size: 1.1em;
             line-height: 1.8;
             margin: 30px 0;
-            min-height: 200px;
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
         
         .progress-bar {
@@ -67,6 +70,7 @@
             border-radius: 5px;
             margin: 20px 0;
             overflow: hidden;
+            flex-shrink: 0;
         }
         
         .progress-fill {
@@ -78,6 +82,7 @@
         
         .controls {
             margin-top: 20px;
+            flex-shrink: 0;
         }
         
         .back-btn {
@@ -171,7 +176,7 @@
             Preparati per iniziare
         </div>
         
-        <div id="aveCounter" style="margin: 20px 0;"></div>
+        <div id="aveCounter" style="margin: 20px 0; flex-shrink: 0;"></div>
         
         <div class="controls">
             <button class="back-btn" onclick="indietro()" id="backBtn" style="display: none;">‹</button>
@@ -412,7 +417,6 @@
             let html = '';
             
             if (isIniziali) {
-                html = `<div style="margin-bottom: 10px;">Ave Maria iniziali</div>`;
                 for (let i = 1; i <= 3; i++) {
                     let classe = '';
                     if (i < aveNumber) {
@@ -423,7 +427,6 @@
                     html += `<span class="ave-counter ${classe}">${i}</span>`;
                 }
             } else {
-                html = `<div style="margin-bottom: 10px;">${decina + 1}° decina</div>`;
                 for (let i = 1; i <= 10; i++) {
                     let classe = '';
                     if (i < aveNumber) {
