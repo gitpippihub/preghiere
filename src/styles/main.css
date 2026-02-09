@@ -402,127 +402,155 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Rosary Selection */
 .rosary-selection {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: var(--space-lg) var(--space-md);
   min-height: 100vh;
 }
 
 .rosary-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
-  color: var(--accent-color);
-  margin: 2rem 0 1rem;
-  font-weight: 700;
+  color: var(--primary);
+  margin: var(--space-lg) 0 var(--space-sm);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .rosary-subtitle {
   text-align: center;
-  color: var(--text-secondary);
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-xl);
   font-family: var(--font-sans);
 }
 
 .mystery-selection-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .mystery-card {
-  background: var(--surface);
-  border: 2px solid var(--border-color);
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-lg);
   cursor: pointer;
-  transition: var(--transition);
+  transition: all var(--transition-base);
   font-family: inherit;
   text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.mystery-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--mystery-color, var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.mystery-card:hover::before {
+  transform: scaleX(1);
 }
 
 .mystery-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--mystery-color, var(--primary-color));
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--mystery-color, var(--accent-light));
 }
 
 .mystery-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+  opacity: 0.9;
 }
 
 .mystery-name {
-  font-size: 1.5rem;
-  color: var(--mystery-color, var(--primary-color));
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--mystery-color, var(--primary));
+  margin-bottom: var(--space-md);
+  font-weight: 500;
 }
 
 .mystery-list {
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   font-family: var(--font-sans);
+  line-height: 1.6;
 }
 
 .mystery-list li {
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
+  padding: 0.4rem 0;
+  padding-left: var(--space-md);
   position: relative;
 }
 
 .mystery-list li::before {
-  content: '•';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--mystery-color, var(--primary-color));
-  font-weight: bold;
+  top: 0.9rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--mystery-color, var(--accent));
 }
 
 /* Rosary Prayer */
 .rosary-prayer {
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: var(--space-lg) var(--space-md);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .rosary-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-lg);
 }
 
 .rosary-mystery-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .rosary-progress-bar {
   width: 100%;
-  height: 8px;
-  background: var(--border-color);
-  border-radius: 4px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .rosary-progress-fill {
   height: 100%;
-  transition: width 0.3s ease;
-  border-radius: 4px;
+  transition: width var(--transition-base);
+  border-radius: 3px;
 }
 
 .rosary-counter {
   font-family: var(--font-sans);
-  color: var(--text-secondary);
-  font-size: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .rosary-prayer-content {
@@ -530,63 +558,68 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
-  background: var(--surface);
-  border-radius: 20px;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 2rem;
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--border);
+  min-height: 320px;
 }
 
 .current-prayer {
-  font-size: 1.3rem;
-  line-height: 2;
+  font-size: 1.2rem;
+  line-height: 1.85;
   text-align: center;
+  color: var(--text-primary);
 }
 
 .rosary-controls {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-sm);
   justify-content: center;
 }
 
 .rosary-btn-primary,
 .rosary-btn-secondary {
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-size: 1.1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
   font-family: var(--font-sans);
   font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all var(--transition-fast);
   border: none;
 }
 
 .rosary-btn-primary {
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
+  border: 1px solid var(--primary);
 }
 
 .rosary-btn-primary:hover {
-  background: var(--accent-color);
-  transform: scale(1.05);
-  box-shadow: var(--shadow-md);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .rosary-btn-secondary {
-  background: var(--surface);
+  background: var(--bg-card);
   color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
 }
 
 .rosary-btn-secondary:hover {
-  background: var(--border-color);
+  background: var(--bg-elevated);
+  border-color: var(--primary);
 }
 
 /* Rosary Complete */
 .rosary-complete {
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: var(--space-xl) var(--space-lg);
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -596,56 +629,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .complete-icon {
-  font-size: 6rem;
-  margin-bottom: 2rem;
-  animation: celebration 0.6s ease-in-out;
+  font-size: 5rem;
+  margin-bottom: var(--space-lg);
+  animation: celebration 0.5s ease-in-out;
 }
 
 @keyframes celebration {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2) rotate(10deg); }
+  50% { transform: scale(1.15) rotate(5deg); }
 }
 
 .rosary-complete h2 {
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  font-weight: 600;
 }
 
 .rosary-complete p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   font-family: var(--font-sans);
 }
 
 .rosary-complete .mystery-name {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  font-weight: 600;
-  margin: 2rem 0;
+  font-size: 1.3rem;
+  color: var(--accent-dark);
+  font-weight: 500;
+  margin: var(--space-md) 0;
 }
 
 .rosary-complete .rosary-btn-primary {
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .home-view {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
   .site-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
   
   .featured-cards {
     grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
   
   .prayer-content {
-    padding: 2rem 1.5rem;
+    padding: var(--space-lg) var(--space-md);
   }
   
   .prayer-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
   
   .mystery-selection-grid {
@@ -653,19 +692,44 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .rosary-prayer-content {
-    padding: 2rem 1.5rem;
+    padding: var(--space-lg) var(--space-md);
+    min-height: 280px;
   }
   
   .current-prayer {
     font-size: 1.1rem;
   }
+  
+  .rosary-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .rosary-btn-primary,
+  .rosary-btn-secondary {
+    width: 100%;
+  }
 }
 
-/* Animations */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.85rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .prayer-title {
+    font-size: 1.65rem;
+  }
+}
+
+/* Animations & Utilities */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -677,5 +741,24 @@ h1, h2, h3, h4, h5, h6 {
 .prayer-view,
 .rosary-selection,
 .rosary-prayer {
-  animation: fadeIn 0.4s ease-out;
+  animation: fadeIn 0.35s ease-out;
 }
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--accent-light);
+  color: var(--primary);
+}
+
+/* Focus styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
